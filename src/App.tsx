@@ -1,17 +1,16 @@
-import { useEffect, useState } from "react";
 import "./App.css";
-import { AppShell, Button, FileInput, Text } from "@mantine/core";
+import { Text } from "@mantine/core";
 import DocViewer, {
-  DocRenderer,
+  // DocRenderer,
   DocViewerRenderers,
-  MSDocRenderer,
-  PDFRenderer,
+  // MSDocRenderer,
+  // PDFRenderer,
 } from "@cyntler/react-doc-viewer";
 
 function App() {
-  const [value, setValue] = useState<File[] | undefined>(undefined);
-  const [pFile, setPFile] = useState<File | null>(null);
-  const [docUri, setDocUri] = useState<string>("");
+  // const [value, setValue] = useState<File[] | undefined>(undefined);
+  // const [pFile, setPFile] = useState<File | null>(null);
+  // const [docUri, setDocUri] = useState<string>("");
   // const docs = [
   //   {
   //     uri: new URL("../public/testdocx.docx", import.meta.url).href,
@@ -26,16 +25,16 @@ function App() {
     { uri: "/testdocx.docx" },
   ];
 
-  console.log(new URL("../public/testdocx.docx", import.meta.url).href);
+  // console.log(new URL("../public/testdocx.docx", import.meta.url).href);
 
-  useEffect(() => {
-    if (pFile) {
-      console.log(pFile);
-      console.log(
-        new URL(window.URL.createObjectURL(pFile), import.meta.url).href,
-      );
-    }
-  }, [pFile]);
+  // useEffect(() => {
+  //   if (pFile) {
+  //     console.log(pFile);
+  //     console.log(
+  //       new URL(window.URL.createObjectURL(pFile), import.meta.url).href,
+  //     );
+  //   }
+  // }, [pFile]);
 
   return (
     <>
